@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lullaby</title>
+    <description>Follow Your Passion</description>
+    <link>https://kopever.com//</link>
+    <atom:link href="https://kopever.com//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 12 Jul 2019 00:55:28 +0800</pubDate>
+    <lastBuildDate>Fri, 12 Jul 2019 00:55:28 +0800</lastBuildDate>
+    <generator>Jekyll v3.6.3</generator>
+
+    
+      <item>
+        <title>Shadowsocks and v2ray server tutorial</title>
+        <description>&lt;p&gt;Coming soon…&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 Jul 2019 00:00:00 +0800</pubDate>
+        <link>https://kopever.com//shadowsocks-v2ray-server-tutorial</link>
+        <guid isPermaLink="true">https://kopever.com//shadowsocks-v2ray-server-tutorial</guid>
+      </item>
+    
+      <item>
+        <title>Shadowsocks and v2ray client tutorial</title>
+        <description>&lt;p&gt;服务端由shadowsocks及v2ray搭建的客户端使用教程&lt;/p&gt;
+
+&lt;h5 id=&quot;windows&quot;&gt;Windows&lt;/h5&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;下载&lt;a href=&quot;https://github.com/shadowsocks/shadowsocks-windows/releases&quot; target=&quot;_blank&quot;&gt;shadowsocks-windows&lt;/a&gt;最新版客户端；&lt;/li&gt;
+    &lt;li&gt;下载&lt;a href=&quot;https://github.com/shadowsocks/v2ray-plugin/releases&quot; target=&quot;_blank&quot;&gt;shadowsocks-v2ray-plugin&lt;/a&gt;最新版客户端插件；&lt;/li&gt;
+    &lt;li&gt;解压shadowsocks-windows客户端；&lt;/li&gt;
+    &lt;li&gt;解压shadowsocks-v2ray-plugin插件；&lt;/li&gt;
+    &lt;li&gt;将v2ray-plugin_windows_***.exe放到解压的shadowsocks-windows客户端的目录；&lt;/li&gt;
+    &lt;li&gt;打开shadowsocks-windows客户端程序；&lt;/li&gt;
+    &lt;li&gt;填写服务器配置地址、端口、密码、加密；&lt;/li&gt;
+    &lt;li&gt;插件程序填入插件程序的文件名v2ray-plugin_windows_***；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;macos&quot;&gt;MacOS&lt;/h5&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;下载&lt;a href=&quot;https://github.com/shadowsocks/ShadowsocksX-NG/files/3269413/ShadowsocksX-NG.zip&quot; target=&quot;_blank&quot;&gt;ShadowsocksX-NG&lt;/a&gt;客户端(必须使用此链接版本)；&lt;/li&gt;
+    &lt;li&gt;解压ShadowsocksX-NG.zip；&lt;/li&gt;
+    &lt;li&gt;打开ShadowsocksX-NG并填入服务器、端口、密码、算法；&lt;/li&gt;
+    &lt;li&gt;插件选择v2ray-plugin；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;ios&quot;&gt;iOS&lt;/h5&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;进入AppStore下载shadowrocket最新版客户端程序(美区)；&lt;/li&gt;
+    &lt;li&gt;打开shadowrocket并点击右上角加号添加服务器节点；&lt;/li&gt;
+    &lt;li&gt;类型选择Shadowsocks并填入服务器、端口、密码、算法；&lt;/li&gt;
+    &lt;li&gt;点击插件，选择v2ray-plugin并填入地址及端口(同上)；&lt;/li&gt;
+    &lt;li&gt;返回点击右上角&quot;完成&quot;；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;android&quot;&gt;Android&lt;/h5&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;下载并安装&lt;a href=&quot;https://github.com/shadowsocks/shadowsocks-android/releases&quot; target=&quot;_blank&quot;&gt;shadowsocks-android&lt;/a&gt;最新版客户端；&lt;/li&gt;
+    &lt;li&gt;下载并安装&lt;a href=&quot;https://github.com/shadowsocks/v2ray-plugin-android/releases&quot; target=&quot;_blank&quot;&gt;v2ray-plugin-android&lt;/a&gt;最新版客户端插件；&lt;/li&gt;
+    &lt;li&gt;打开shadowsocks客户端并填入服务器、端口、密码、加密方式；&lt;/li&gt;
+    &lt;li&gt;插件选择v2ray；&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Fri, 28 Jun 2019 00:00:00 +0800</pubDate>
+        <link>https://kopever.com//shadowsocks-v2ray-client-tutorial</link>
+        <guid isPermaLink="true">https://kopever.com//shadowsocks-v2ray-client-tutorial</guid>
+      </item>
+    
+      <item>
+        <title>Windows diskpart</title>
+        <description>&lt;h4 id=&quot;windows-diskpart-命令集合&quot;&gt;Windows diskpart 命令集合&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;进入Windows操作系统安装界面按Shift+F10输入diskpart回车&lt;br /&gt;
+所有命令都可以通过diskpart -h获取帮助&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;常用命令&quot;&gt;常用命令&lt;/h5&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;clean
+list
+select
+create
+format
+exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;常规步骤&quot;&gt;常规步骤&lt;/h5&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;list disk
+select disk 0
+convert gpt
+list disk
+detail disk
+create partition efi size 1024
+create partition msr size 1024
+list partition
+create partition primary size=71681
+active
+format fs=ntfs quick
+(assign letter(=)C)
+(list volume)
+create partition extended
+list partition
+(select partition 0)
+create partition logical size=102407
+(delete partition)
+format fs=ntfs quick
+exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;常用整数分区&quot;&gt;常用整数分区&lt;/h5&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Size     NTFS         FAT32
+70 G     71681 MB     71956 MB
+80 G     81926 MB     82236 MB
+90 G     92162 MB     92516 MB
+100 G    102407 MB    102796 MB
+150 G    153606 MB    154196 MB
+200 G    204806 MB    205596 MB
+300 G    307204 MB    308396 MB
+500 G    512002 MB    513996 MB
+1000 G   1024003 MB   1027996 MB
+1024 G   1048579 MB   1052668 MB
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 07 Jul 2017 00:00:00 +0800</pubDate>
+        <link>https://kopever.com//windows-diskpart</link>
+        <guid isPermaLink="true">https://kopever.com//windows-diskpart</guid>
+      </item>
+    
+
+    
+      
+        
+      
+    
+      
+        
+          <item>
+            <title>About</title>
+            <description>&lt;center&gt;&lt;strong&gt;Life isn’t about finding yourself. Life is about creating yourself.&lt;/strong&gt;&lt;/center&gt;
+</description>
+            <link>https://kopever.com//about.html</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Style Guide</title>
+            <description>At [Aspire Themes](http://aspirethemes.com/) I use a lot of tools to help me create WordPress, Ghost and Jekyll themes. Tools will range from development, design, services, hosting and automation.
+
+Graphic design is the paradise of individuality, eccentricity, heresy, abnormality, hobbies, and humors. - George Santayana.
+
+---
+
+# Simple default styles for headings
+
+## Simple default styles for headings
+
+### Simple default styles for headings
+
+#### Simple default styles for headings
+
+##### Simple default styles for headings
+
+###### Simple default styles for headings
+
+---
+
+* Ut at interdum nunc. Maecenas commodo turpis quis elementum gravida.
+* Nunc ac sapien tellus. Quisque risus enim, tempus eget porttitor.
+* Donec nibh massa, rutrum a sollicitudin eu, lacinia in lorem.
+
+---
+
+1. Ut at interdum nunc. Maecenas commodo turpis quis elementum gravida.
+2. Nunc ac sapien tellus. Quisque risus enim, tempus eget porttitor in.
+3. Donec nibh massa, rutrum a sollicitudin eu.
+
+---
+
+&gt; Graphic design is the paradise of individuality, eccentricity, heresy, abnormality, hobbies, and humors. - George Santayana
+
+---
+
+{% highlight js %}
+'use strict';
+var markdown = require('markdown').markdown;
+function Editor(input, preview) {
+  this.update = function() {
+    preview.innerHTML = markdown.toHTML(input.value);
+  };
+  input.editor = this;
+  this.update();
+}
+{% endhighlight %}
+
+You can add inline code just like this, E.g. `.code { color: #fff; }`
+
+{% highlight css %}
+pre {
+  background-color: #f4f4f4;
+  max-width: 100%;
+  overflow: auto;
+}
+{% endhighlight %}
+
+---
+
+Cras sed sodales enim. Duis nec erat magna. Sed scelerisque pretium mi et [unsplash](https://unsplash.com/) ullamcorper mauris aliquam ornare fringilla. In luctus commodo quam eget posuere.
+
+---
+
+&lt;iframe src=&quot;https://player.vimeo.com/video/97202679&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+&lt;iframe src=&quot;https://embed.ted.com/talks/ted_halstead_a_climate_solution_where_all_sides_can_win&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/29738591&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&quot;&gt;&lt;/iframe&gt;
+
+---
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;YWvpRo&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;kharrop&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Referral Form&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/kharrop/pen/YWvpRo/&quot;&gt;Referral Form&lt;/a&gt; by Kelly Harrop (&lt;a href=&quot;http://codepen.io/kharrop&quot;&gt;@kharrop&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+---
+
+![about](/images/pages/about.jpeg)
+
+---
+
+&lt;input type=&quot;text&quot; placeholder=&quot;I'm an input field!&quot;&gt;
+
+---
+
+&lt;button class='c-btn c-btn--small'&gt;Button&lt;/button&gt;
+
+&lt;button class='c-btn'&gt;Button&lt;/button&gt;
+
+&lt;button class='c-btn c-btn--full'&gt;Button&lt;/button&gt;
+
+{% highlight html %}
+&lt;button class='c-btn c-btn--small'&gt;Button&lt;/button&gt;
+&lt;button class='c-btn'&gt;Button&lt;/button&gt;
+&lt;button class='c-btn c-btn--full'&gt;Button&lt;/button&gt;
+{% endhighlight %}
+</description>
+            <link>https://kopever.com//style-guide.html</link>
+          </item>
+        
+      
+    
+
+  </channel>
+</rss>
