@@ -5,9 +5,9 @@
     <description>Follow Your Passion</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Nov 2019 00:57:39 +0800</pubDate>
-    <lastBuildDate>Thu, 07 Nov 2019 00:57:39 +0800</lastBuildDate>
-    <generator>Jekyll v3.6.3</generator>
+    <pubDate>Thu, 07 Nov 2019 16:23:52 +0800</pubDate>
+    <lastBuildDate>Thu, 07 Nov 2019 16:23:52 +0800</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
 
     
       <item>
@@ -142,8 +142,8 @@ exit
       
         
           <item>
-            <title>About</title>
-            <description>&lt;p&gt;&lt;strong&gt;Life isn’t about finding yourself. Life is about creating yourself.&lt;/strong&gt;&lt;/p&gt;
+            <title></title>
+            <description>&lt;h6 id=&quot;may-the-force-be-with-you&quot;&gt;May the Force be with you.&lt;/h6&gt;
 </description>
             <link>http://localhost:4000/about.html</link>
           </item>
