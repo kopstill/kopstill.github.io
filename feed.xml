@@ -3,25 +3,93 @@
   <channel>
     <title>Lullaby</title>
     <description>Follow Your Passion</description>
-    <link>https://kopever.com//</link>
-    <atom:link href="https://kopever.com//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Nov 2019 16:30:03 +0800</pubDate>
-    <lastBuildDate>Thu, 07 Nov 2019 16:30:03 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 10 Jan 2020 17:27:17 +0800</pubDate>
+    <lastBuildDate>Fri, 10 Jan 2020 17:27:17 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
 
     
       <item>
         <title>Shadowsocks and v2ray server tutorial</title>
-        <description>&lt;p&gt;Coming soon…&lt;/p&gt;
+        <description>&lt;h6 id=&quot;基于shadowsocksv2ray的服务端搭建教程&quot;&gt;基于shadowsocks+v2ray的服务端搭建教程&lt;/h6&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;shadowsocks选择的是shadowsocks-libev分支版本，v2ray作为插件使用&lt;br /&gt;
+安装可参考&lt;a href=&quot;https://github.com/shadowsocks/shadowsocks-libev/blob/master/README.md&quot; target=&quot;_blank&quot;&gt;Github文档&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;debian&quot;&gt;Debian&lt;/h5&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;参考Github文档安装shadowsocks-libev，Debian可以通过命令行安装，也可通过源码安装；&lt;/li&gt;
+    &lt;li&gt;安装v2ray-plugin插件；
+        &lt;ol&gt;
+            &lt;li&gt;下载最新版本&lt;a href=&quot;https://github.com/shadowsocks/v2ray-plugin/releases&quot; target=&quot;_blank&quot;&gt;v2ray-plugin&lt;/a&gt;插件，Debian可通过dpkg --print-architecture查看系统架构版本；&lt;/li&gt;
+            &lt;li&gt;解压缩包并将解压出的可执行文件v2ray-plugin_linux_*移动到/usr/local/bin目录；&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;配置文件中plugin字段填入插件程序名v2ray-plugin_linux_*；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;安装bbr加速&quot;&gt;安装BBR加速&lt;/h5&gt;
+&lt;p&gt;参考秋水逸冰&lt;a href=&quot;https://teddysun.com/489.html&quot; target=&quot;_blank&quot;&gt;一键安装最新内核并开启 BBR 脚本&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;配置文件示例&quot;&gt;配置文件示例&lt;/h5&gt;
+
+&lt;h6 id=&quot;单端口配置configjson&quot;&gt;单端口配置config.json&lt;/h6&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &quot;server&quot;:&quot;0.0.0.0&quot;,
+    &quot;server_port&quot;:8000,
+    &quot;local_port&quot;:1080,
+    &quot;mode&quot;:&quot;tcp_and_udp&quot;,
+    &quot;password&quot;:&quot;password&quot;,
+    &quot;timeout&quot;:300,
+    &quot;fast_open&quot;:true,
+    &quot;method&quot;:&quot;chacha20-ietf-poly1305&quot;,
+    &quot;plugin&quot;:&quot;v2ray-plugin&quot;,
+    &quot;plugin_opts&quot;:&quot;server&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h6 id=&quot;多端口配置managerjson&quot;&gt;多端口配置manager.json&lt;/h6&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &quot;server&quot;:&quot;0.0.0.0&quot;,
+    &quot;local_port&quot;:1080,
+    &quot;mode&quot;:&quot;tcp_and_udp&quot;,
+    &quot;port_password&quot;:{
+        &quot;8000&quot;:&quot;password0&quot;,
+        &quot;8001&quot;:&quot;password1&quot;,
+        &quot;8002&quot;:&quot;password2&quot;
+    },
+    &quot;timeout&quot;:300,
+    &quot;fast_open&quot;:true,
+    &quot;method&quot;:&quot;chacha20-ietf-poly1305&quot;,
+    &quot;plugin&quot;:&quot;v2ray-plugin&quot;,
+    &quot;plugin_opts&quot;:&quot;server&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;相关命令&quot;&gt;相关命令&lt;/h5&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;&lt;font size=&quot;3&quot;&gt;nohup ss-server -c /etc/shadowsocks-libev/config.json &amp;gt;~/shadowsocks.log 2&amp;gt;&amp;amp;1 &amp;amp;&lt;/font&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;font size=&quot;3&quot;&gt;nohup ss-manager -c /etc/shadowsocks-libev/manager.json &amp;gt;~/shadowsocks.log 2&amp;gt;&amp;amp;1 &amp;amp;&lt;/font&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;font size=&quot;3&quot;&gt;pkill ss-server / pkill v2ray-plugin / killall ss-server /killall v2ray-plugin&lt;/font&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         <pubDate>Fri, 12 Jul 2019 00:00:00 +0800</pubDate>
-        <link>https://kopever.com//shadowsocks-v2ray-server-tutorial</link>
-        <guid isPermaLink="true">https://kopever.com//shadowsocks-v2ray-server-tutorial</guid>
+        <link>http://localhost:4000/shadowsocks-v2ray-server-tutorial</link>
+        <guid isPermaLink="true">http://localhost:4000/shadowsocks-v2ray-server-tutorial</guid>
       </item>
     
       <item>
         <title>Shadowsocks and v2ray client tutorial</title>
-        <description>&lt;h6 id=&quot;服务端由shadowsocks及v2ray搭建的客户端使用教程&quot;&gt;服务端由shadowsocks及v2ray搭建的客户端使用教程&lt;/h6&gt;
+        <description>&lt;h6 id=&quot;服务端基于shadowsocksv2ray搭建的客户端使用教程&quot;&gt;服务端基于shadowsocks+v2ray搭建的客户端使用教程&lt;/h6&gt;
 
 &lt;p&gt;&lt;strong&gt;Windows&lt;/strong&gt;&lt;/p&gt;
 
@@ -30,10 +98,10 @@
     &lt;li&gt;下载&lt;a href=&quot;https://github.com/shadowsocks/v2ray-plugin/releases&quot; target=&quot;_blank&quot;&gt;shadowsocks-v2ray-plugin&lt;/a&gt;最新版客户端插件；&lt;/li&gt;
     &lt;li&gt;解压shadowsocks-windows客户端；&lt;/li&gt;
     &lt;li&gt;解压shadowsocks-v2ray-plugin插件；&lt;/li&gt;
-    &lt;li&gt;将v2ray-plugin_windows_***.exe放到解压的shadowsocks-windows客户端的目录；&lt;/li&gt;
-    &lt;li&gt;打开shadowsocks-windows客户端程序；&lt;/li&gt;
+    &lt;li&gt;将v2ray-plugin_windows_*.exe放到解压的shadowsocks-windows客户端的目录；&lt;/li&gt;
+    &lt;li&gt;打开shadowsocks-windows目录的客户端程序Shadowsocks.exe；&lt;/li&gt;
     &lt;li&gt;填写服务器配置地址、端口、密码、加密；&lt;/li&gt;
-    &lt;li&gt;插件程序填入插件程序的文件名v2ray-plugin_windows_***；&lt;/li&gt;
+    &lt;li&gt;插件程序栏填入插件程序的文件名v2ray-plugin_windows_*；&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;macOS&lt;/strong&gt;&lt;/p&gt;
@@ -48,8 +116,8 @@
 &lt;p&gt;&lt;strong&gt;iOS&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-    &lt;li&gt;进入AppStore下载shadowrocket最新版客户端程序(美区)；&lt;/li&gt;
-    &lt;li&gt;打开shadowrocket并点击右上角加号添加服务器节点；&lt;/li&gt;
+    &lt;li&gt;进入AppStore下载Shadowrocket最新版客户端程序(美区)；&lt;/li&gt;
+    &lt;li&gt;打开Shadowrocket并点击右上角加号添加服务器节点；&lt;/li&gt;
     &lt;li&gt;类型选择Shadowsocks并填入服务器、端口、密码、算法；&lt;/li&gt;
     &lt;li&gt;点击插件，选择v2ray-plugin并填入地址及端口(同上)；&lt;/li&gt;
     &lt;li&gt;返回点击右上角&quot;完成&quot;；&lt;/li&gt;
@@ -60,31 +128,34 @@
 &lt;ol&gt;
     &lt;li&gt;下载并安装&lt;a href=&quot;https://github.com/shadowsocks/shadowsocks-android/releases&quot; target=&quot;_blank&quot;&gt;shadowsocks-android&lt;/a&gt;最新版客户端；&lt;/li&gt;
     &lt;li&gt;下载并安装&lt;a href=&quot;https://github.com/shadowsocks/v2ray-plugin-android/releases&quot; target=&quot;_blank&quot;&gt;v2ray-plugin-android&lt;/a&gt;最新版客户端插件；&lt;/li&gt;
-    &lt;li&gt;打开shadowsocks客户端并填入服务器、端口、密码、加密方式；&lt;/li&gt;
+    &lt;li&gt;打开Shadowsocks客户端并填入服务器、端口、密码、加密方式；&lt;/li&gt;
     &lt;li&gt;插件选择v2ray；&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Fri, 28 Jun 2019 00:00:00 +0800</pubDate>
-        <link>https://kopever.com//shadowsocks-v2ray-client-tutorial</link>
-        <guid isPermaLink="true">https://kopever.com//shadowsocks-v2ray-client-tutorial</guid>
+        <link>http://localhost:4000/shadowsocks-v2ray-client-tutorial</link>
+        <guid isPermaLink="true">http://localhost:4000/shadowsocks-v2ray-client-tutorial</guid>
       </item>
     
       <item>
         <title>Windows diskpart</title>
-        <description>&lt;h4 id=&quot;windows-diskpart-命令集合&quot;&gt;Windows diskpart 命令集合&lt;/h4&gt;
+        <description>&lt;h4 id=&quot;windows-diskpart-命令&quot;&gt;Windows diskpart 命令&lt;/h4&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;进入Windows操作系统安装界面按Shift+F10输入diskpart回车&lt;br /&gt;
-所有命令都可以通过diskpart -h获取帮助&lt;/p&gt;
+  &lt;p&gt;进入Windows安装程序界面按Shift+F10唤起命令提示符窗口，输入diskpart回车进入分区工具&lt;br /&gt;
+所有命令均可通过diskpart -h获取帮助&lt;br /&gt;
+官方文档：&lt;a href=&quot;https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/diskpart&quot; target=&quot;_blank&quot;&gt;中文&lt;/a&gt; | 
+           &lt;a href=&quot;https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart&quot; target=&quot;_blank&quot;&gt;英文&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h5 id=&quot;常用命令&quot;&gt;常用命令&lt;/h5&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;clean
-list
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;list
 select
 create
+delete
 format
-exit
+convert
+clean
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
@@ -92,23 +163,22 @@ exit
 &lt;h5 id=&quot;常规步骤&quot;&gt;常规步骤&lt;/h5&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;list disk
 select disk 0
+clean
 convert gpt
-list disk
 detail disk
 create partition efi size 1024
 create partition msr size 1024
+create partition primary size 71681
 list partition
-create partition primary size=71681
-active
+select partition 0
 format fs=ntfs quick
-(assign letter(=)C)
-(list volume)
+assign letter C
 create partition extended
+create partition logical size 102407
 list partition
-(select partition 0)
-create partition logical size=102407
-(delete partition)
+select partition 0
 format fs=ntfs quick
+assign letter D
 exit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -129,8 +199,8 @@ exit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 07 Jul 2017 00:00:00 +0800</pubDate>
-        <link>https://kopever.com//windows-diskpart</link>
-        <guid isPermaLink="true">https://kopever.com//windows-diskpart</guid>
+        <link>http://localhost:4000/windows-diskpart</link>
+        <guid isPermaLink="true">http://localhost:4000/windows-diskpart</guid>
       </item>
     
 
@@ -145,7 +215,7 @@ exit
             <title></title>
             <description>&lt;h6 id=&quot;may-the-force-be-with-you&quot;&gt;May the Force be with you.&lt;/h6&gt;
 </description>
-            <link>https://kopever.com//about.html</link>
+            <link>http://localhost:4000/about.html</link>
           </item>
         
       
@@ -259,7 +329,7 @@ Cras sed sodales enim. Duis nec erat magna. Sed scelerisque pretium mi et [unspl
 &lt;button class='c-btn c-btn--full'&gt;Button&lt;/button&gt;
 {% endhighlight %}
 </description>
-            <link>https://kopever.com//style-guide.html</link>
+            <link>http://localhost:4000/style-guide.html</link>
           </item>
         
       

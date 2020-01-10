@@ -7,9 +7,9 @@
   <meta name='viewport' content='width=device-width, initial-scale=1'>
 
   <title>Windows diskpart</title>
-  <meta name='description' content="Windows diskpart 命令集合">
-  <link rel='canonical' href="https://kopever.com//windows-diskpart">
-  <link rel='alternate' type='application/rss+xml' title='Lullaby' href="https://kopever.com//feed.xml">
+  <meta name='description' content="Windows diskpart 命令">
+  <link rel='canonical' href="http://localhost:4000/windows-diskpart">
+  <link rel='alternate' type='application/rss+xml' title='Lullaby' href="http://localhost:4000/feed.xml">
 
   <style>
     
@@ -65,20 +65,23 @@
         <time class='c-post__date' datetime='2017-07-07T00:00:00+08:00' itemprop='datePublished'>07 Jul 2017</time>
 
         <div class='c-content' itemprop='articleBody'>
-          <h4 id="windows-diskpart-命令集合">Windows diskpart 命令集合</h4>
+          <h4 id="windows-diskpart-命令">Windows diskpart 命令</h4>
 
 <blockquote>
-  <p>进入Windows操作系统安装界面按Shift+F10输入diskpart回车<br />
-所有命令都可以通过diskpart -h获取帮助</p>
+  <p>进入Windows安装程序界面按Shift+F10唤起命令提示符窗口，输入diskpart回车进入分区工具<br />
+所有命令均可通过diskpart -h获取帮助<br />
+官方文档：<a href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/diskpart" target="_blank">中文</a> | 
+           <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart" target="_blank">英文</a></p>
 </blockquote>
 
 <h5 id="常用命令">常用命令</h5>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clean
-list
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list
 select
 create
+delete
 format
-exit
+convert
+clean
 </code></pre></div></div>
 
 <hr />
@@ -86,23 +89,22 @@ exit
 <h5 id="常规步骤">常规步骤</h5>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list disk
 select disk 0
+clean
 convert gpt
-list disk
 detail disk
 create partition efi size 1024
 create partition msr size 1024
+create partition primary size 71681
 list partition
-create partition primary size=71681
-active
+select partition 0
 format fs=ntfs quick
-(assign letter(=)C)
-(list volume)
+assign letter C
 create partition extended
+create partition logical size 102407
 list partition
-(select partition 0)
-create partition logical size=102407
-(delete partition)
+select partition 0
 format fs=ntfs quick
+assign letter D
 exit
 </code></pre></div></div>
 
