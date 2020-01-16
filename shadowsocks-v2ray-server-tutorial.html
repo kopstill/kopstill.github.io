@@ -8,8 +8,8 @@
 
   <title>Shadowsocks and v2ray server tutorial</title>
   <meta name='description' content="基于shadowsocks+v2ray的服务端搭建教程">
-  <link rel='canonical' href="http://localhost:4000/shadowsocks-v2ray-server-tutorial">
-  <link rel='alternate' type='application/rss+xml' title='Lullaby' href="http://localhost:4000/feed.xml">
+  <link rel='canonical' href="https://kopever.com//shadowsocks-v2ray-server-tutorial">
+  <link rel='alternate' type='application/rss+xml' title='Lullaby' href="https://kopever.com//feed.xml">
 
   <style>
     
@@ -68,25 +68,23 @@
           <h6 id="基于shadowsocksv2ray的服务端搭建教程">基于shadowsocks+v2ray的服务端搭建教程</h6>
 
 <blockquote>
-  <p>shadowsocks选择的是shadowsocks-libev分支版本，v2ray作为插件使用<br />
-安装可参考<a href="https://github.com/shadowsocks/shadowsocks-libev/blob/master/README.md" target="_blank">Github文档</a></p>
+  <p>shadowsocks选择的是基于C语言的<a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank">shadowsocks-libev</a>分支版本，v2ray作为其插件<br />
+<a href="https://github.com/shadowsocks/shadowsocks-libev/blob/master/README.md" target="_blank">Github安装文档</a></p>
 </blockquote>
 
-<h5 id="debian">Debian</h5>
-
 <ol>
-    <li>参考Github文档安装shadowsocks-libev，Debian可以通过命令行安装，也可通过源码安装；</li>
+    <li>参考Github文档安装shadowsocks-libev；</li>
     <li>安装v2ray-plugin插件；
         <ol>
-            <li>下载最新版本<a href="https://github.com/shadowsocks/v2ray-plugin/releases" target="_blank">v2ray-plugin</a>插件，Debian可通过dpkg --print-architecture查看系统架构版本；</li>
-            <li>解压缩包并将解压出的可执行文件v2ray-plugin_linux_*移动到/usr/local/bin目录；</li>
+            <li>根据操作系统下载最新版<a href="https://github.com/shadowsocks/v2ray-plugin/releases" target="_blank">v2ray-plugin</a>插件程序包；</li>
+            <li>解压程序包并将解压出的可执行文件v2ray-plugin_linux_*移动到/usr/local/bin目录；</li>
         </ol>
     </li>
     <li>配置文件中plugin字段填入插件程序名v2ray-plugin_linux_*；</li>
 </ol>
 
 <h5 id="安装bbr加速">安装BBR加速</h5>
-<p>参考秋水逸冰<a href="https://teddysun.com/489.html" target="_blank">一键安装最新内核并开启 BBR 脚本</a></p>
+<p>参考秋水逸冰<a href="https://teddysun.com/489.html" target="_blank">一键安装最新内核并开启BBR脚本</a></p>
 
 <h5 id="配置文件示例">配置文件示例</h5>
 
