@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/kopever
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kopever.com
+  * I am kopever (https://keybase.io/kopever) on keybase.
+  * I have a public key ASAzuhojFDs-COpVC3gb9Lw2TIG5o-vLF-uUJt1q9X3dgAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012033ba1a23143b3e08ea550b781bf4bc364c81b9a3ebcb17eb9426dd6af57ddd800a",
+      "host": "keybase.io",
+      "kid": "012033ba1a23143b3e08ea550b781bf4bc364c81b9a3ebcb17eb9426dd6af57ddd800a",
+      "uid": "c24231048049f4f76f799b6ddbfbc419",
+      "username": "kopever"
+    },
+    "merkle_root": {
+      "ctime": 1652159253,
+      "hash": "f1fce8153fdd350df8f03b5b949a426200c506834b1747f75eddaa94d4442efb894d56514da9ba35d2b2c414b857e51503db55bc9a4c0c93176cb0ac524f3012",
+      "hash_meta": "c0f601a1a2f1c20151e729186a21f73947094ac9b7ee846ab6f8348fd067db33",
+      "seqno": 22454761
+    },
+    "service": {
+      "entropy": "DJBywFjAugmfoAMGwy/indX1",
+      "hostname": "kopever.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.2"
+  },
+  "ctime": 1652159320,
+  "expire_in": 504576000,
+  "prev": "43b3905be561d35b360faa991a00513b840ee6f352f0c285ba558fe163ef6bc6",
+  "seqno": 14,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgM7oaIxQ7PgjqVQt4G/S8NkyBuaPryxfrlCbdavV93YAKp3BheWxvYWTESpcCDsQgQ7OQW+Vh01s2D6qZGgBRO4QO5vNS8MKFulWP4WPva8bEIIYqq+j9A/mpb8zPuH9dmVVLH8kRTmXB99FpR+jRv135AgHCo3NpZ8RAtu8rYbyXX8kASAvo8JxGLtaNBa9j6S1dZw9xiMk8IujswmzT0KSRjcnuT6DJRZtbjIodWL/mpChhx4ZtQqWuB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJSjWSYYl0YGjdcT3awrLFxdGlzleGygFQSD+WByYNpwo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kopever
+
+==================================================================
