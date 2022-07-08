@@ -27,7 +27,7 @@
 
   
   
-  <meta name="description" content="基于 shadowsocks-libev&#43;v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
+  <meta name="description" content="基于 shadowsocks-libev &#43; v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
 v2ray-plugin 作为其插件
 Github 安装文档
 参考 GitHub 文档安装 shadowsocks-libev； 安装 v2ray-plugin 插件； 根据操作系统下载最新版 v2ray-plugin 插件程序包； 解压程序包并将解压出的可执行文件 v2ray-plugin 移动到 /usr/local/bin 目录； 配置文件中 plugin 字段填入插件程序名 v2ray-plugin，注意与上一步解压出的可执行文件名称保持一致； 安装 BBR 加速 参考秋水逸冰一键安装最新内核并开启 BBR 脚本
@@ -83,7 +83,7 @@ Github 安装文档
   
   
   <meta property="og:title" content="Shadowsocks 服务端教程" />
-<meta property="og:description" content="基于 shadowsocks-libev&#43;v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
+<meta property="og:description" content="基于 shadowsocks-libev &#43; v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
 v2ray-plugin 作为其插件
 Github 安装文档
 参考 GitHub 文档安装 shadowsocks-libev； 安装 v2ray-plugin 插件； 根据操作系统下载最新版 v2ray-plugin 插件程序包； 解压程序包并将解压出的可执行文件 v2ray-plugin 移动到 /usr/local/bin 目录； 配置文件中 plugin 字段填入插件程序名 v2ray-plugin，注意与上一步解压出的可执行文件名称保持一致； 安装 BBR 加速 参考秋水逸冰一键安装最新内核并开启 BBR 脚本
@@ -96,18 +96,18 @@ Github 安装文档
 
   
   <meta itemprop="name" content="Shadowsocks 服务端教程">
-<meta itemprop="description" content="基于 shadowsocks-libev&#43;v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
+<meta itemprop="description" content="基于 shadowsocks-libev &#43; v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
 v2ray-plugin 作为其插件
 Github 安装文档
 参考 GitHub 文档安装 shadowsocks-libev； 安装 v2ray-plugin 插件； 根据操作系统下载最新版 v2ray-plugin 插件程序包； 解压程序包并将解压出的可执行文件 v2ray-plugin 移动到 /usr/local/bin 目录； 配置文件中 plugin 字段填入插件程序名 v2ray-plugin，注意与上一步解压出的可执行文件名称保持一致； 安装 BBR 加速 参考秋水逸冰一键安装最新内核并开启 BBR 脚本
 配置文件示例 单端口配置 config.json { &#34;server&#34;:&#34;0.0.0.0&#34;, &#34;server_port&#34;:8000, &#34;local_port&#34;:1080, &#34;mode&#34;:&#34;tcp_and_udp&#34;, &#34;password&#34;:&#34;password&#34;, &#34;timeout&#34;:300, &#34;fast_open&#34;:true, &#34;method&#34;:&#34;chacha20-ietf-poly1305&#34;, &#34;plugin&#34;:&#34;v2ray-plugin&#34;, &#34;plugin_opts&#34;:&#34;server&#34; } 多端口配置 manager.json { &#34;server&#34;:&#34;0.0.0.0&#34;, &#34;local_port&#34;:1080, &#34;mode&#34;:&#34;tcp_and_udp&#34;, &#34;port_password&#34;:{ &#34;8000&#34;:&#34;password0&#34;, &#34;8001&#34;:&#34;password1&#34;, &#34;8002&#34;:&#34;password2&#34; }, &#34;timeout&#34;:300, &#34;fast_open&#34;:true, &#34;method&#34;:&#34;chacha20-ietf-poly1305&#34;, &#34;plugin&#34;:&#34;v2ray-plugin&#34;, &#34;plugin_opts&#34;:&#34;server&#34; } 相关命令 nohup ss-server -c /etc/shadowsocks-libev/config."><meta itemprop="datePublished" content="2019-07-12T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2019-07-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="97">
+<meta itemprop="wordCount" content="99">
 <meta itemprop="keywords" content="" />
   
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Shadowsocks 服务端教程"/>
-<meta name="twitter:description" content="基于 shadowsocks-libev&#43;v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
+<meta name="twitter:description" content="基于 shadowsocks-libev &#43; v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
 v2ray-plugin 作为其插件
 Github 安装文档
 参考 GitHub 文档安装 shadowsocks-libev； 安装 v2ray-plugin 插件； 根据操作系统下载最新版 v2ray-plugin 插件程序包； 解压程序包并将解压出的可执行文件 v2ray-plugin 移动到 /usr/local/bin 目录； 配置文件中 plugin 字段填入插件程序名 v2ray-plugin，注意与上一步解压出的可执行文件名称保持一致； 安装 BBR 加速 参考秋水逸冰一键安装最新内核并开启 BBR 脚本
@@ -196,7 +196,7 @@ Github 安装文档
     </p>
     <h1>Shadowsocks 服务端教程</h1>
   </header>
-  <section class="post-content"><h3 id="基于-shadowsocks-libevv2ray-的服务端搭建教程">基于 shadowsocks-libev+v2ray 的服务端搭建教程</h3>
+  <section class="post-content"><h3 id="基于-shadowsocks-libev--v2ray-的服务端搭建教程">基于 shadowsocks-libev + v2ray 的服务端搭建教程</h3>
 <blockquote>
 <p>shadowsocks 选择的是基于 C 语言的 <a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank">shadowsocks-libev</a><br>
 <a href="https://github.com/shadowsocks/v2ray-plugin" target="_blank">v2ray-plugin</a> 作为其插件<br>

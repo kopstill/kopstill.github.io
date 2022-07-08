@@ -22,7 +22,7 @@
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kopever.com/post/shadowsocks-server/</guid>
-      <description>基于 shadowsocks-libev+v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
+      <description>基于 shadowsocks-libev + v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
 v2ray-plugin 作为其插件
 Github 安装文档
 参考 GitHub 文档安装 shadowsocks-libev； 安装 v2ray-plugin 插件； 根据操作系统下载最新版 v2ray-plugin 插件程序包； 解压程序包并将解压出的可执行文件 v2ray-plugin 移动到 /usr/local/bin 目录； 配置文件中 plugin 字段填入插件程序名 v2ray-plugin，注意与上一步解压出的可执行文件名称保持一致； 安装 BBR 加速 参考秋水逸冰一键安装最新内核并开启 BBR 脚本
