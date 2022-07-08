@@ -13,25 +13,30 @@
       <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://kopever.com/post/colima-journey/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shadowsocks 客户端教程</title>
-      <link>https://kopever.com/post/shadowsocks-client/</link>
-      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://kopever.com/post/shadowsocks-client/</guid>
-      <description></description>
+      <description>TODO </description>
     </item>
     
     <item>
       <title>Shadowsocks 服务端教程</title>
       <link>https://kopever.com/post/shadowsocks-server/</link>
-      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kopever.com/post/shadowsocks-server/</guid>
-      <description></description>
+      <description>基于 shadowsocks-libev+v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
+v2ray-plugin 作为其插件
+Github 安装文档
+参考 GitHub 文档安装 shadowsocks-libev； 安装 v2ray-plugin 插件； 根据操作系统下载最新版v2ray-plugin插件程序包； 解压程序包并将解压出的可执行文件 v2ray-plugin_linux_*移动到/usr/local/bin 目录； 配置文件中 plugin 字段填入插件程序名 v2ray-plugin_linux_*； 安装 BBR 加速 参考秋水逸冰一键安装最新内核并开启 BBR 脚本
+配置文件示例 单端口配置 config.json { &amp;#34;server&amp;#34;:&amp;#34;0.0.0.0&amp;#34;, &amp;#34;server_port&amp;#34;:8000, &amp;#34;local_port&amp;#34;:1080, &amp;#34;mode&amp;#34;:&amp;#34;tcp_and_udp&amp;#34;, &amp;#34;password&amp;#34;:&amp;#34;password&amp;#34;, &amp;#34;timeout&amp;#34;:300, &amp;#34;fast_open&amp;#34;:true, &amp;#34;method&amp;#34;:&amp;#34;chacha20-ietf-poly1305&amp;#34;, &amp;#34;plugin&amp;#34;:&amp;#34;v2ray-plugin&amp;#34;, &amp;#34;plugin_opts&amp;#34;:&amp;#34;server&amp;#34; } 多端口配置 manager.json { &amp;#34;server&amp;#34;:&amp;#34;0.0.0.0&amp;#34;, &amp;#34;local_port&amp;#34;:1080, &amp;#34;mode&amp;#34;:&amp;#34;tcp_and_udp&amp;#34;, &amp;#34;port_password&amp;#34;:{ &amp;#34;8000&amp;#34;:&amp;#34;password0&amp;#34;, &amp;#34;8001&amp;#34;:&amp;#34;password1&amp;#34;, &amp;#34;8002&amp;#34;:&amp;#34;password2&amp;#34; }, &amp;#34;timeout&amp;#34;:300, &amp;#34;fast_open&amp;#34;:true, &amp;#34;method&amp;#34;:&amp;#34;chacha20-ietf-poly1305&amp;#34;, &amp;#34;plugin&amp;#34;:&amp;#34;v2ray-plugin&amp;#34;, &amp;#34;plugin_opts&amp;#34;:&amp;#34;server&amp;#34; } 相关命令 nohup ss-server -c /etc/shadowsocks-libev/config.json &gt; ~/shadowsocks.</description>
+    </item>
+    
+    <item>
+      <title>Shadowsocks 客户端教程</title>
+      <link>https://kopever.com/post/shadowsocks-client/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://kopever.com/post/shadowsocks-client/</guid>
+      <description> shadowsocks 服务端基于 shadowsocks-libev+v2ray 搭建的客户端使用教程
+Windows 下载shadowsocks-windows最新版客户端； 下载shadowsocks-v2ray-plugin最新版客户端插件； 解压 shadowsocks-windows 客户端； 解压 shadowsocks-v2ray-plugin 插件； 将 v2ray-plugin_windows_*.exe 放到解压的 shadowsocks-windows 客户端的目录； 打开 shadowsocks-windows 目录的客户端程序 Shadowsocks.exe； 填写服务器配置地址、端口、密码、加密； 插件程序栏填入插件程序的文件名 v2ray-plugin_windows_*； macOS 下载ShadowsocksX-NG客户端； 解压 ShadowsocksX-NG.zip； 打开 ShadowsocksX-NG 并填入服务器、端口、密码、算法； 插件选择 v2ray-plugin； iOS 进入 AppStore 下载 Shadowrocket 最新版客户端程序 (美区)； 打开 Shadowrocket 并点击右上角加号添加服务器节点； 类型选择 Shadowsocks 并填入服务器、端口、密码、算法； 点击插件，选择 v2ray-plugin 并填入地址及端口 (同上)； 返回点击右上角&#34;完成&#34;； Android 下载并安装shadowsocks-android最新版客户端； 下载并安装v2ray-plugin-android最新版客户端插件； 打开 Shadowsocks 客户端并填入服务器、端口、密码、加密方式； 插件选择 v2ray； </description>
     </item>
     
     <item>
