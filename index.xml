@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lullaby</title>
+    <link>https://kopever.com/</link>
+    <description>Recent content on Lullaby</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kopever.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Colima 初体验</title>
+      <link>https://kopever.com/post/colima-journey/</link>
+      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kopever.com/post/colima-journey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shadowsocks 客户端教程</title>
+      <link>https://kopever.com/post/shadowsocks-client/</link>
+      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kopever.com/post/shadowsocks-client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shadowsocks 服务端教程</title>
+      <link>https://kopever.com/post/shadowsocks-server/</link>
+      <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kopever.com/post/shadowsocks-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows Diskpart 极简使用介绍</title>
+      <link>https://kopever.com/post/windows-diskpart/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kopever.com/post/windows-diskpart/</guid>
+      <description> Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到
+维基百科：Wiki Diskpart
+官方文档：中文 | 英文
+进入 Windows 安装程序界面按 Shift+F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具
+所有命令均可通过 diskpart -h 获得帮助
+常用命令 list select create delete format convert clean 常规步骤 list disk select disk 0 clean convert gpt detail disk create partition efi size 1024 create partition msr size 1024 create partition primary size 71681 list partition select partition 0 format fs=ntfs quick assign letter C create partition extended create partition logical size 102407 list partition select partition 0 format fs=ntfs quick assign letter D exit 常用整数分区 Size NTFS FAT32 70 G 71681 MB 71956 MB 80 G 81926 MB 82236 MB 90 G 92162 MB 92516 MB 100 G 102407 MB 102796 MB 150 G 153606 MB 154196 MB 200 G 204806 MB 205596 MB 300 G 307204 MB 308396 MB 500 G 512002 MB 513996 MB 1000 G 1024003 MB 1027996 MB 1024 G 1048579 MB 1052668 MB </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://kopever.com/about/</link>
+      <pubDate>Sat, 23 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://kopever.com/about/</guid>
+      <description>There is only one heroism in the world: to see the world as it is, and to love it.</description>
+    </item>
+    
+  </channel>
+</rss>
