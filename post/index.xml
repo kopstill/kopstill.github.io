@@ -13,7 +13,12 @@
       <pubDate>Fri, 08 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://kopever.com/post/colima-journey/</guid>
-      <description>TODO </description>
+      <description>背景 很长一段时间 Docker Desktop 都无法在线更新，点击更新后图标一直转，但是始终无法更新；之前在 Docker 社区论坛看到有不少人都有遇到过这个问题，至今也没有好的解决方案，基本都是手动下载最新镜像重新安装； Docker 官方社区论坛讨论：Docker Desktop won’t update on MacOS Docker Desktop 资源消耗严重，com.docker.hyperkit 进程占用超 10G，虽然有虚拟内存，但看着实属膈应，CPU 有时也占用过多导致风扇狂转，也比较耗电； 可视化界面有点鸡肋，没有太大作用，而且是用内存大户 Electron 写的，天下苦 Electron 久矣。 Colima 介绍 Colima 是基于 Lima 开发的，Lima 基于 QEMU，支持 ARM，M1，Docker，containerd，Kubernetes，端口转发，卷挂载等；
+按官方说法：是在 macOS 或 Linux 上所需最少设置的容器运行时。
+Colima 安装问题 具体安装方法在其 GitHub 主页，这里只列举安装过程可能会遇到的问题：
+brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝试几次，brew 不会全量重新下载，会缓存已下载的包，或者修改 brew 镜像源地址； 中科大镜像源 清华大学开源软件镜像站 阿里云镜像源 Colima 启动问题 执行 colima start 时会从 GitHub 拉取 alpine-lima-clm-3.14.6-x86_64.iso 镜像（277.9M），由于国内网络原因始终无法完整的拉取，想着应该可以手动下载并放在指定位置，正准备研究源码时发现了这篇文章 记 mac 下尝鲜 colima 的坎坷经历，作者跟我遇到了一样的问题，于是参考他的方案解决了此问题，在此表示感谢；
+参考源码地址
+解决方案步骤： 手动下载 alpine-lima-clm-3.</description>
     </item>
     
     <item>
@@ -24,7 +29,7 @@
       <guid>https://kopever.com/post/shadowsocks-server/</guid>
       <description>基于 shadowsocks-libev + v2ray 的服务端搭建教程 shadowsocks 选择的是基于 C 语言的 shadowsocks-libev
 v2ray-plugin 作为其插件
-安装说明 参考 Github 文档 安装 shadowsocks-libev； 安装 v2ray-plugin 插件； 根据操作系统下载最新版 v2ray-plugin 插件程序包； 解压程序包并将解压出的可执行文件 v2ray-plugin 移动到 /usr/local/bin 目录； 配置文件中 plugin 字段填入插件程序名 v2ray-plugin，注意与上一步解压出的可执行文件名称保持一致； 安装 BBR 加速 参考秋水逸冰一键安装最新内核并开启 BBR 脚本
+安装说明 参考 Github 文档 安装 shadowsocks-libev； 安装 v2ray-plugin 插件； 根据操作系统类型下载最新版 v2ray-plugin 插件程序压缩包； 解压出可执行文件 v2ray-plugin 并移动到 /usr/local/bin 目录。 配置文件中 plugin 字段填入插件程序名 v2ray-plugin，注意与上一步解压出的可执行文件名称保持一致。 安装 BBR 加速 参考秋水逸冰一键安装最新内核并开启 BBR 脚本
 配置文件示例 单端口配置 config.json { &amp;#34;server&amp;#34;:&amp;#34;0.0.0.0&amp;#34;, &amp;#34;server_port&amp;#34;:8000, &amp;#34;local_port&amp;#34;:1080, &amp;#34;mode&amp;#34;:&amp;#34;tcp_and_udp&amp;#34;, &amp;#34;password&amp;#34;:&amp;#34;password&amp;#34;, &amp;#34;timeout&amp;#34;:300, &amp;#34;fast_open&amp;#34;:true, &amp;#34;method&amp;#34;:&amp;#34;chacha20-ietf-poly1305&amp;#34;, &amp;#34;plugin&amp;#34;:&amp;#34;v2ray-plugin&amp;#34;, &amp;#34;plugin_opts&amp;#34;:&amp;#34;server&amp;#34; } 多端口配置 manager.json { &amp;#34;server&amp;#34;:&amp;#34;0.0.0.0&amp;#34;, &amp;#34;local_port&amp;#34;:1080, &amp;#34;mode&amp;#34;:&amp;#34;tcp_and_udp&amp;#34;, &amp;#34;port_password&amp;#34;:{ &amp;#34;8000&amp;#34;:&amp;#34;password0&amp;#34;, &amp;#34;8001&amp;#34;:&amp;#34;password1&amp;#34;, &amp;#34;8002&amp;#34;:&amp;#34;password2&amp;#34; }, &amp;#34;timeout&amp;#34;:300, &amp;#34;fast_open&amp;#34;:true, &amp;#34;method&amp;#34;:&amp;#34;chacha20-ietf-poly1305&amp;#34;, &amp;#34;plugin&amp;#34;:&amp;#34;v2ray-plugin&amp;#34;, &amp;#34;plugin_opts&amp;#34;:&amp;#34;server&amp;#34; } 相关命令 nohup ss-server -c /etc/shadowsocks-libev/config.</description>
     </item>
     
@@ -34,7 +39,7 @@ v2ray-plugin 作为其插件
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kopever.com/post/shadowsocks-client/</guid>
-      <description>Shadowsocks 服务端基于 shadowsocks-libev + v2ray 搭建的客户端使用教程 Windows 下载 shadowsocks-windows 最新版客户端； 下载 shadowsocks-v2ray-plugin 最新版客户端插件； 解压 shadowsocks-windows 客户端； 解压 shadowsocks-v2ray-plugin 插件； 将 v2ray-plugin.exe 放到解压的 shadowsocks-windows 客户端的目录； 打开 shadowsocks-windows 目录的客户端程序 Shadowsocks.exe； 填写服务器配置地址、端口、密码、加密； 插件程序栏填入插件程序的文件名 v2ray-plugin； macOS 下载 ShadowsocksX-NG 客户端； 解压 ShadowsocksX-NG.zip； 打开 ShadowsocksX-NG 并填入服务器、端口、密码、算法； 插件选择 v2ray-plugin； iOS 进入 AppStore 下载 Shadowrocket 最新版客户端程序 (美区)； 打开 Shadowrocket 并点击右上角加号添加服务器节点； 类型选择 Shadowsocks 并填入服务器、端口、密码、算法； 点击插件，选择 v2ray-plugin 并填入地址及端口 (同上)； 返回点击右上角&#34;完成&#34;； Android 下载并安装 shadowsocks-android 最新版客户端； 下载并安装 v2ray-plugin-android 最新版客户端插件； 打开 Shadowsocks 客户端并填入服务器、端口、密码、加密方式； 插件选择 v2ray； </description>
+      <description>Shadowsocks 服务端基于 shadowsocks-libev + v2ray 搭建的客户端使用教程 Windows 下载 shadowsocks-windows 最新版客户端； 下载 shadowsocks-v2ray-plugin 最新版客户端插件； 解压 shadowsocks-windows 客户端； 解压 shadowsocks-v2ray-plugin 插件； 将 v2ray-plugin.exe 放到解压的 shadowsocks-windows 客户端的目录； 打开 shadowsocks-windows 目录的客户端程序 Shadowsocks.exe； 填写服务器配置地址、端口、密码、加密； 插件程序栏填入插件程序的文件名 v2ray-plugin。 macOS 下载 ShadowsocksX-NG 客户端； 解压 ShadowsocksX-NG.zip； 打开 ShadowsocksX-NG 并填入服务器、端口、密码、算法； 插件选择 v2ray-plugin。 iOS 进入 AppStore 下载 Shadowrocket 最新版客户端程序 (美区)； 打开 Shadowrocket 并点击右上角加号添加服务器节点； 类型选择 Shadowsocks 并填入服务器、端口、密码、算法； 点击插件，选择 v2ray-plugin 并填入地址及端口 (同上)； 返回点击右上角&#34;完成&#34;。 Android 下载并安装 shadowsocks-android 最新版客户端； 下载并安装 v2ray-plugin-android 最新版客户端插件； 打开 Shadowsocks 客户端并填入服务器、端口、密码、加密方式； 插件选择 v2ray。 </description>
     </item>
     
     <item>
