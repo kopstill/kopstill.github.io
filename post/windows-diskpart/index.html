@@ -23,15 +23,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   
-  <title>Windows Diskpart 极简使用介绍 - Lullaby</title>
+  <title>Windows diskpart 极简使用介绍 - Lullaby</title>
 
   
   
-  <meta name="description" content=" Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到
-维基百科：Wiki Diskpart
+  <meta name="description" content="介绍 Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到。
 官方文档：中文 | 英文
-进入 Windows 安装程序界面按 Shift &#43; F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具
-所有命令均可通过 diskpart -h 获得帮助
+使用 进入 Windows 安装程序界面按 Shift &#43; F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具。
+所有命令均可通过 diskpart -h 获得帮助。
 常用命令 list select create delete format convert clean 常规步骤 list disk select disk 0 clean convert gpt detail disk create partition efi size 1024 create partition msr size 1024 create partition primary size 71681 list partition select partition 0 format fs=ntfs quick assign letter C create partition extended create partition logical size 102407 list partition select partition 0 format fs=ntfs quick assign letter D exit 常用整数分区 Size NTFS FAT32 70 G 71681 MB 71956 MB 80 G 81926 MB 82236 MB 90 G 92162 MB 92516 MB 100 G 102407 MB 102796 MB 150 G 153606 MB 154196 MB 200 G 204806 MB 205596 MB 300 G 307204 MB 308396 MB 500 G 512002 MB 513996 MB 1000 G 1024003 MB 1027996 MB 1024 G 1048579 MB 1052668 MB " />
   <meta name="author" content="kopever" />
   
@@ -83,12 +82,11 @@
   
   
   
-  <meta property="og:title" content="Windows Diskpart 极简使用介绍" />
-<meta property="og:description" content=" Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到
-维基百科：Wiki Diskpart
+  <meta property="og:title" content="Windows diskpart 极简使用介绍" />
+<meta property="og:description" content="介绍 Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到。
 官方文档：中文 | 英文
-进入 Windows 安装程序界面按 Shift &#43; F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具
-所有命令均可通过 diskpart -h 获得帮助
+使用 进入 Windows 安装程序界面按 Shift &#43; F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具。
+所有命令均可通过 diskpart -h 获得帮助。
 常用命令 list select create delete format convert clean 常规步骤 list disk select disk 0 clean convert gpt detail disk create partition efi size 1024 create partition msr size 1024 create partition primary size 71681 list partition select partition 0 format fs=ntfs quick assign letter C create partition extended create partition logical size 102407 list partition select partition 0 format fs=ntfs quick assign letter D exit 常用整数分区 Size NTFS FAT32 70 G 71681 MB 71956 MB 80 G 81926 MB 82236 MB 90 G 92162 MB 92516 MB 100 G 102407 MB 102796 MB 150 G 153606 MB 154196 MB 200 G 204806 MB 205596 MB 300 G 307204 MB 308396 MB 500 G 512002 MB 513996 MB 1000 G 1024003 MB 1027996 MB 1024 G 1048579 MB 1052668 MB " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kopever.com/post/windows-diskpart/" /><meta property="article:section" content="post" />
@@ -97,24 +95,22 @@
 
 
   
-  <meta itemprop="name" content="Windows Diskpart 极简使用介绍">
-<meta itemprop="description" content=" Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到
-维基百科：Wiki Diskpart
+  <meta itemprop="name" content="Windows diskpart 极简使用介绍">
+<meta itemprop="description" content="介绍 Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到。
 官方文档：中文 | 英文
-进入 Windows 安装程序界面按 Shift &#43; F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具
-所有命令均可通过 diskpart -h 获得帮助
+使用 进入 Windows 安装程序界面按 Shift &#43; F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具。
+所有命令均可通过 diskpart -h 获得帮助。
 常用命令 list select create delete format convert clean 常规步骤 list disk select disk 0 clean convert gpt detail disk create partition efi size 1024 create partition msr size 1024 create partition primary size 71681 list partition select partition 0 format fs=ntfs quick assign letter C create partition extended create partition logical size 102407 list partition select partition 0 format fs=ntfs quick assign letter D exit 常用整数分区 Size NTFS FAT32 70 G 71681 MB 71956 MB 80 G 81926 MB 82236 MB 90 G 92162 MB 92516 MB 100 G 102407 MB 102796 MB 150 G 153606 MB 154196 MB 200 G 204806 MB 205596 MB 300 G 307204 MB 308396 MB 500 G 512002 MB 513996 MB 1000 G 1024003 MB 1027996 MB 1024 G 1048579 MB 1052668 MB "><meta itemprop="datePublished" content="2017-07-07T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-07-07T00:00:00+00:00" />
 <meta itemprop="wordCount" content="157">
 <meta itemprop="keywords" content="" />
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Windows Diskpart 极简使用介绍"/>
-<meta name="twitter:description" content=" Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到
-维基百科：Wiki Diskpart
+<meta name="twitter:title" content="Windows diskpart 极简使用介绍"/>
+<meta name="twitter:description" content="介绍 Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到。
 官方文档：中文 | 英文
-进入 Windows 安装程序界面按 Shift &#43; F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具
-所有命令均可通过 diskpart -h 获得帮助
+使用 进入 Windows 安装程序界面按 Shift &#43; F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具。
+所有命令均可通过 diskpart -h 获得帮助。
 常用命令 list select create delete format convert clean 常规步骤 list disk select disk 0 clean convert gpt detail disk create partition efi size 1024 create partition msr size 1024 create partition primary size 71681 list partition select partition 0 format fs=ntfs quick assign letter C create partition extended create partition logical size 102407 list partition select partition 0 format fs=ntfs quick assign letter D exit 常用整数分区 Size NTFS FAT32 70 G 71681 MB 71956 MB 80 G 81926 MB 82236 MB 90 G 92162 MB 92516 MB 100 G 102407 MB 102796 MB 150 G 153606 MB 154196 MB 200 G 204806 MB 205596 MB 300 G 307204 MB 308396 MB 500 G 512002 MB 513996 MB 1000 G 1024003 MB 1027996 MB 1024 G 1048579 MB 1052668 MB "/>
 
   
@@ -198,16 +194,15 @@
       <span>kopever</span>
       
     </p>
-    <h1>Windows Diskpart 极简使用介绍</h1>
+    <h1>Windows diskpart 极简使用介绍</h1>
   </header>
-  <section class="post-content"><blockquote>
-<p>Diskpart 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 Fdisk，我们日常安装 Windows 操作系统时经常需要用到<br>
-维基百科：<a href="https://en.wikipedia.org/wiki/Diskpart" target="_blank">Wiki Diskpart</a><br>
-官方文档：<a href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/diskpart" target="_blank">中文</a> | <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart" target="_blank">英文</a><br>
-进入 Windows 安装程序界面按 Shift + F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具<br>
-所有命令均可通过 diskpart -h 获得帮助</p>
-</blockquote>
-<h5 id="常用命令">常用命令</h5>
+  <section class="post-content"><h3 id="介绍">介绍</h3>
+<p><a href="https://en.wikipedia.org/wiki/Diskpart" target="_blank">Diskpart</a> 是 Windows 2000 或更高版本的 Microsoft 操作系统中包含的命令行磁盘分区实用程序，取代了其前身 <a href="https://en.wikipedia.org/wiki/Fdisk" target="_blank">Fdisk</a>，我们日常安装 Windows 操作系统时经常需要用到。<br>
+官方文档：<a href="https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/diskpart" target="_blank">中文</a> | <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart" target="_blank">英文</a></p>
+<h3 id="使用">使用</h3>
+<p>进入 Windows 安装程序界面按 Shift + F10 唤起命令提示符窗口，输入 diskpart 回车进入分区工具。<br>
+所有命令均可通过 diskpart -h 获得帮助。</p>
+<h4 id="常用命令">常用命令</h4>
 <pre tabindex="0"><code class="language-diskpart" data-lang="diskpart">list
 select
 create
@@ -215,7 +210,7 @@ delete
 format
 convert
 clean
-</code></pre><h5 id="常规步骤">常规步骤</h5>
+</code></pre><h4 id="常规步骤">常规步骤</h4>
 <pre tabindex="0"><code class="language-diskpart" data-lang="diskpart">list disk
 select disk 0
 clean
@@ -235,7 +230,7 @@ select partition 0
 format fs=ntfs quick
 assign letter D
 exit
-</code></pre><h5 id="常用整数分区">常用整数分区</h5>
+</code></pre><h4 id="常用整数分区">常用整数分区</h4>
 <pre tabindex="0"><code class="language-diskpart" data-lang="diskpart">Size     NTFS         FAT32
 70 G     71681 MB     71956 MB
 80 G     81926 MB     82236 MB
