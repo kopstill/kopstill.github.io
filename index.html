@@ -24,7 +24,16 @@
 
 
 
-<html class="not-ready text-sm lg:text-base" lang="en-us">
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en-us"
+>
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -51,10 +60,12 @@
   
 
   
+  
+  
   <link
     rel="preload"
     as="image"
-    href="https://kopever.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+    href="https://kopever.com/theme.png"
   />
 
   
@@ -75,13 +86,13 @@
   <link rel="apple-touch-icon" href="https://kopever.com/apple-touch-icon.png" />
 
   
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.104.2" />
 
   
   
   <link
     rel="alternate"
-    type="application/rss+xml"
+    type="application/rss&#43;xml"
     href="https://kopever.com/index.xml"
     title="Lullaby"
   />
@@ -129,15 +140,27 @@
     class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
   ></a>
 
+  
   <script>
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    
     const htmlClass = document.documentElement.classList;
-    setTimeout(() => htmlClass.remove('not-ready'), 10);
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
 
-    const setDark = (newDark) => {
-      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
-      htmlClass[newDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', newDark);
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
     };
 
     
@@ -154,12 +177,6 @@
     const btnDark = document.querySelector('.btn-dark');
     btnDark.addEventListener('click', () => {
       setDark(localStorage.getItem('dark') !== 'true');
-    });
-
-    
-    const btnMenu = document.querySelector('.btn-menu');
-    btnMenu.addEventListener('click', () => {
-      htmlClass.toggle('open');
     });
   </script>
 
