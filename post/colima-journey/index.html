@@ -97,7 +97,7 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
   <link rel="apple-touch-icon" href="https://kopever.com/apple-touch-icon.png" />
 
   
-  <meta name="generator" content="Hugo 0.104.2" />
+  <meta name="generator" content="Hugo 0.105.0">
 
   
   
@@ -211,8 +211,12 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
 
     
     const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const darkVal = localStorage.getItem('dark');
-    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
 
     
     darkScheme.addEventListener('change', (event) => {
