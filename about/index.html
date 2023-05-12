@@ -29,6 +29,8 @@
 
 
 
+
+
 <html
   class="not-ready text-sm lg:text-base"
   style="--bg: #faf6f1"
@@ -37,13 +39,19 @@
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
 
   
   <title>About - Lullaby</title>
 
   
   <meta name="theme-color" />
+
+  
+  
   
   <meta name="description" content="There is only one heroism in the world: to see the world as it is, and to love it." />
   <meta name="author" content="kopever" />
@@ -66,13 +74,8 @@
   
 
   
-  
-  
-  <link
-    rel="preload"
-    as="image"
-    href="https://kopever.com/theme.png"
-  />
+   
+  <link rel="preload" as="image" href="https://kopever.com/theme.png" />
 
   
   
@@ -92,7 +95,7 @@
   <link rel="apple-touch-icon" href="https://kopever.com/apple-touch-icon.png" />
 
   
-  <meta name="generator" content="Hugo 0.105.0">
+  <meta name="generator" content="Hugo 0.111.3">
 
   
   
@@ -126,15 +129,12 @@ if (!doNotTrack) {
 </script>
 
   
-  
-  
   <meta property="og:title" content="About" />
 <meta property="og:description" content="About me" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kopever.com/about/" /><meta property="article:section" content="" />
 <meta property="article:published_time" content="2016-01-23T00:00:00+00:00" />
 <meta property="article:modified_time" content="2016-01-23T00:00:00+00:00" />
-
 
   
   <meta itemprop="name" content="About">
@@ -154,17 +154,23 @@ if (!doNotTrack) {
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
   <div class="relative z-50 mr-auto flex items-center">
-    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://kopever.com/"
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://kopever.com/"
       >Lullaby</a
     >
-    <a
-      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-    ></a>
+    <div
+      class="btn-dark text-[0] ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
   </div>
 
-  <a
+  <div
     class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-  ></a>
+    role="button"
+    aria-label="Menu"
+  ></div>
 
   
   <script>
@@ -232,25 +238,34 @@ if (!doNotTrack) {
     >
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./twitter.svg)"
-        href=" https://twitter.com/kopstill "
+        href="https://twitter.com/kopstill"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        twitter
+      </a>
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./github.svg)"
-        href=" https://github.com/kopstill "
+        href="https://github.com/kopstill"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        github
+      </a>
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./instagram.svg)"
-        href=" https://instagram.com/kopstill "
+        href="https://instagram.com/kopstill"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        instagram
+      </a>
       
     </nav>
     
@@ -259,7 +274,7 @@ if (!doNotTrack) {
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-16 pb-24 dark:prose-invert"
     >
       
 
@@ -282,20 +297,30 @@ if (!doNotTrack) {
 
   
   
+
+  
+  
 </article>
 
 
     </main>
 
-    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
   <div class="mr-auto">
-    &copy; 2022
+    &copy; 2023
     <a class="link" href="https://kopever.com/">Lullaby</a>
   </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
   >️
-  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
-    >▷ Paper 6</a
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >Theme Paper</a
   >
 </footer>
 

@@ -29,6 +29,8 @@
 
 
 
+
+
 <html
   class="not-ready text-sm lg:text-base"
   style="--bg: #faf6f1"
@@ -37,13 +39,19 @@
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
 
   
   <title>Colima 初体验 - Lullaby</title>
 
   
   <meta name="theme-color" />
+
+  
+  
   
   <meta name="description" content="背景 很长一段时间以来 Docker Desktop 都无法在线更新，点击更新后图标一直转动，但始终无法更新成功；之前在 Docker 官方社区论坛看到有人讨论过这个问题，至今也没有好的解决方案，基本都是手动下载最新镜像重新安装； Docker 官方社区论坛讨论：Docker Desktop won’t update on MacOS Docker Desktop 资源消耗严重，单 com.docker.hyperkit 进程内存占用超 10G，实际容器占用内存很少，CPU 有时也因占用过多而导致风扇狂转、机器发烫，也比较耗电； 可视化界面有点鸡肋，没有太大作用，而且是用内存大户 Electron 写的，天下苦 Electron 久矣。 介绍 Colima 是基于 Lima 开发的，Lima 基于 QEMU，支持 ARM，M1，Docker，containerd，Kubernetes，端口转发，卷挂载等；
 按官方说法：是在 macOS 或 Linux 上所需最少设置的容器运行时。
@@ -71,13 +79,8 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
   
 
   
-  
-  
-  <link
-    rel="preload"
-    as="image"
-    href="https://kopever.com/theme.png"
-  />
+   
+  <link rel="preload" as="image" href="https://kopever.com/theme.png" />
 
   
   
@@ -97,7 +100,7 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
   <link rel="apple-touch-icon" href="https://kopever.com/apple-touch-icon.png" />
 
   
-  <meta name="generator" content="Hugo 0.105.0">
+  <meta name="generator" content="Hugo 0.111.3">
 
   
   
@@ -131,8 +134,6 @@ if (!doNotTrack) {
 </script>
 
   
-  
-  
   <meta property="og:title" content="Colima 初体验" />
 <meta property="og:description" content="背景 很长一段时间以来 Docker Desktop 都无法在线更新，点击更新后图标一直转动，但始终无法更新成功；之前在 Docker 官方社区论坛看到有人讨论过这个问题，至今也没有好的解决方案，基本都是手动下载最新镜像重新安装； Docker 官方社区论坛讨论：Docker Desktop won’t update on MacOS Docker Desktop 资源消耗严重，单 com.docker.hyperkit 进程内存占用超 10G，实际容器占用内存很少，CPU 有时也因占用过多而导致风扇狂转、机器发烫，也比较耗电； 可视化界面有点鸡肋，没有太大作用，而且是用内存大户 Electron 写的，天下苦 Electron 久矣。 介绍 Colima 是基于 Lima 开发的，Lima 基于 QEMU，支持 ARM，M1，Docker，containerd，Kubernetes，端口转发，卷挂载等；
 按官方说法：是在 macOS 或 Linux 上所需最少设置的容器运行时。
@@ -144,7 +145,6 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
 <meta property="og:url" content="https://kopever.com/post/colima-journey/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-07-08T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-07-08T00:00:00+00:00" />
-
 
   
   <meta itemprop="name" content="Colima 初体验">
@@ -174,17 +174,23 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
   <div class="relative z-50 mr-auto flex items-center">
-    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://kopever.com/"
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://kopever.com/"
       >Lullaby</a
     >
-    <a
-      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
-    ></a>
+    <div
+      class="btn-dark text-[0] ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
   </div>
 
-  <a
+  <div
     class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-  ></a>
+    role="button"
+    aria-label="Menu"
+  ></div>
 
   
   <script>
@@ -252,25 +258,34 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
     >
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./twitter.svg)"
-        href=" https://twitter.com/kopstill "
+        href="https://twitter.com/kopstill"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        twitter
+      </a>
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./github.svg)"
-        href=" https://github.com/kopstill "
+        href="https://github.com/kopstill"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        github
+      </a>
       
       <a
-        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        class="h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./instagram.svg)"
-        href=" https://instagram.com/kopstill "
+        href="https://instagram.com/kopstill"
         target="_blank"
-      ></a>
+        rel="me"
+      >
+        instagram
+      </a>
       
     </nav>
     
@@ -279,7 +294,7 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-16 pb-24 dark:prose-invert"
     >
       
 
@@ -291,6 +306,8 @@ brew 安装过程中可能会遇到某些依赖包下载不下来，可以多尝
     <div class="text-sm opacity-60">
       
       <time>Jul 8, 2022</time>
+      
+      
       
       
       <span class="mx-1">&middot;</span>
@@ -388,7 +405,7 @@ error getting credentials - err: exec: &ldquo;docker-credential-desktop&rdquo;: 
     
     
     <a
-      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      class="ml-auto flex w-1/2 items-center justify-end rounded-r-md p-6 pl-3 no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
       href="https://kopever.com/post/shadowsocks-server/"
       ><span>Shadowsocks 服务端教程</span><span class="ml-1.5">→</span></a
     >
@@ -398,20 +415,30 @@ error getting credentials - err: exec: &ldquo;docker-credential-desktop&rdquo;: 
 
   
   
+
+  
+  
 </article>
 
 
     </main>
 
-    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
   <div class="mr-auto">
-    &copy; 2022
+    &copy; 2023
     <a class="link" href="https://kopever.com/">Lullaby</a>
   </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
   >️
-  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
-    >▷ Paper 6</a
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >Theme Paper</a
   >
 </footer>
 
